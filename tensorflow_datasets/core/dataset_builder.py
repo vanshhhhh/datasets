@@ -848,6 +848,9 @@ class DatasetBuilder(registered.RegisteredDataset):
     """`tfds.core.BuilderConfig` for this builder."""
     return self._builder_config
 
+  def set_builder_config(self, builder_config: BuilderConfig):
+    self._builder_config = builder_config
+
   def _create_builder_config(self, builder_config):
     """Create and validate BuilderConfig object."""
     if builder_config is None and self.BUILDER_CONFIGS:
